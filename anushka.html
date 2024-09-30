@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You, Anushka</title>
+    <style>
+        body {
+            background-color: #f4e1d2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .heart-container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .heart {
+            font-size: 100px;
+            color: #ff6961;
+            position: relative;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .message {
+            font-size: 3em;
+            color: #333;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff69b4, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .glow {
+            color: #fff;
+            text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff1493;
+            }
+            to {
+                text-shadow: 0 0 15px #ff69b4, 0 0 25px #ff1493, 0 0 35px #ff69b4;
+            }
+        }
+
+        .name {
+            font-size: 2.5em;
+            color: #ff69b4;
+            margin-top: 10px;
+        }
+
+        /* Flower bloom background effect */
+        .flower {
+            position: absolute;
+            bottom: -100px;
+            background-color: transparent;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://i.imgur.com/1Z3an7J.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: bloom 15s infinite ease-in;
+            opacity: 0.8;
+        }
+
+        .flower:nth-child(odd) {
+            animation-duration: 13s;
+        }
+
+        @keyframes bloom {
+            0% {
+                transform: scale(0.1);
+                bottom: -100px;
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+            100% {
+                bottom: 110%;
+                transform: scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* Randomly placed flowers */
+        .flower:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .flower:nth-child(2) {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .flower:nth-child(3) {
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        .flower:nth-child(4) {
+            left: 70%;
+            animation-delay: 1s;
+        }
+
+        .flower:nth-child(5) {
+            left: 90%;
+            animation-delay: 3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart-container">
+        <div class="heart">❤️</div>
+        <div class="message glow">I Love You!</div>
+        <div class="name">Anushka</div>
+    </div>
+
+    <!-- Flower elements -->
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+
+</body>
+</html>
