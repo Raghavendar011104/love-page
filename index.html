@@ -3,165 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Raghavendar & Anushka's Love Page</title>
     <style>
-        /* Basic Styling */
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            background-color: #fce4ec;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            padding: 50px;
-            margin: 0;
+            color: #880e4f;
         }
 
         h1 {
-            color: #ff6f61;
-            font-size: 48px;
-            margin-bottom: 20px;
+            margin-top: 50px;
+            font-size: 3em;
+            color: #d81b60;
         }
 
-        p {
-            font-size: 18px;
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto 20px auto;
+        .heart-container {
+            margin-top: 30px;
         }
 
-        /* Custom Button */
-        .custom-button {
-            background-color: #ff6f61;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 18px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .custom-button:hover {
-            background-color: #e05545;
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer a {
-            color: #ff6f61;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Image Styling */
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Heart Tapper */
-        .heart-tapper {
-            font-size: 40px;
-            color: #ff6f61;
+        .heart {
+            font-size: 5em;
             cursor: pointer;
-            margin: 20px 10px;
-            transition: transform 0.2s ease-in-out;
+            color: #e91e63;
+            transition: transform 0.3s;
         }
 
-        .heart-tapper:hover {
+        .heart:hover {
             transform: scale(1.2);
         }
 
-        .heart-counter {
-            font-size: 24px;
-            color: #ff6f61;
+        .names {
+            font-size: 1.5em;
+            color: #ad1457;
+            margin-top: 20px;
         }
 
-        /* Media Queries for Mobile Responsiveness */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 36px;
-            }
+        .counter {
+            font-size: 1.2em;
+            color: #6a1b9a;
+        }
 
-            p {
-                font-size: 16px;
-            }
-
-            .custom-button {
-                font-size: 16px;
-            }
-
-            .heart-tapper {
-                font-size: 30px;
-            }
-
-            .heart-counter {
-                font-size: 20px;
-            }
+        footer {
+            margin-top: 50px;
+            font-size: 1.2em;
+            color: #880e4f;
         }
     </style>
 </head>
 <body>
+    <h1>Raghavendar ❤ Anushka</h1>
+    <p class="names">Together forever 💖</p>
 
-    <!-- Header Section -->
-    <h1>Welcome to My Love Page!</h1>
-    <p>Here’s a special place to express how much I love you. 💖 I cherish every moment spent together.</p>
-
-    <!-- Image Section -->
-    <img src="images.jpg" alt="Romantic Image">
-
-    <!-- Heart Tapper Section -->
-    <div>
-        <i class="fas fa-heart heart-tapper" id="heart1"></i> <span class="heart-counter" id="counter1">0</span>
-        <i class="fas fa-heart heart-tapper" id="heart2"></i> <span class="heart-counter" id="counter2">0</span>
+    <div class="heart-container">
+        <div>
+            <span class="heart" id="heartR">💖</span>
+            <p class="counter">Raghavendar's Love: <span id="counterR">0</span></p>
+        </div>
+        <div>
+            <span class="heart" id="heartA">💖</span>
+            <p class="counter">Anushka's Love: <span id="counterA">0</span></p>
+        </div>
     </div>
 
-    <!-- Call to Action Button -->
-    <a href="#" class="custom-button">Know More</a>
-
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 My Love Page</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
+        This love page is made with love for Raghavendar & Anushka ❤️
     </footer>
 
-    <!-- Script for Heart Tapper -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Counters for the hearts
-            let count1 = 0;
-            let count2 = 0;
+        // Initialize counters for each heart
+        let counterR = 0;
+        let counterA = 0;
 
-            // Event listener for the first heart
-            document.getElementById('heart1').addEventListener('click', function () {
-                count1++;
-                document.getElementById('counter1').innerText = count1;
-            });
+        // Raghavendar's heart click
+        document.getElementById('heartR').addEventListener('click', function() {
+            counterR++;
+            document.getElementById('counterR').innerText = counterR;
+        });
 
-            // Event listener for the second heart
-            document.getElementById('heart2').addEventListener('click', function () {
-                count2++;
-                document.getElementById('counter2').innerText = count2;
-            });
+        // Anushka's heart click
+        document.getElementById('heartA').addEventListener('click', function() {
+            counterA++;
+            document.getElementById('counterA').innerText = counterA;
         });
     </script>
-
 </body>
 </html>
 
